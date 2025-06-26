@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import CongratsPopup from "./CongratsPopup";
+import { BACKEND_URL } from "../utils/utils";
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/techlead/register", formData);
+      await axios.post(`${BACKEND_URL}/api/techlead/register`, formData);
       toast.success("Registered successfully!");
       setShowPopup(true);
     } catch (err) {
