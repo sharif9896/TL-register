@@ -13,14 +13,7 @@ const Home = () => {
           <Link to={"/"} className="text-xl font-bold">
             Tech Lead Academy
           </Link>
-          <nav className="ml-auto">
-            <Link
-              to={"/Students"}
-              className="bg-blue-500 py-2 px-2 rounded hover:bg-blue-600 cursor-pointer mx-2"
-            >
-              Sigma 1.0
-            </Link>
-          </nav>
+   
         </header>
 
         <img src="ng.png" alt="Banner" className="w-full  object-cover" />

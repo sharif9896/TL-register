@@ -123,6 +123,7 @@ function RegisterForm() {
           <option value="Presidency College, Chennai">
             Presidency College, Chennai
           </option>
+          <option value="Other">Other</option>
         </select>
         <select
           name="role"
