@@ -19,7 +19,7 @@ const CongratsPopup = ({ show, onClose, number, whatsappLink }) => {
         <h2 className="text-2xl font-bold mb-2">Congratulations!</h2>
         <p className="text-gray-700 mb-6">
           Enrolled successfully. Now you can join and access the course by
-          joining our WhatsApp community.
+          joining our WhatsApp community, Just accept to recieve joining link.
         </p>
 
         <a
@@ -30,7 +30,7 @@ const CongratsPopup = ({ show, onClose, number, whatsappLink }) => {
           rel="noopener noreferrer"
           className="inline-block cursor-pointer px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
         >
-          Join WhatsApp Community
+          Accept
         </a>
       </div>
     </div>
