@@ -147,7 +147,7 @@ function RegisterForm() {
       <CongratsPopup
         show={showPopup}
         onClose={() => setShowPopup(false)}
-        whatsappLink="https://chat.whatsapp.com/your-group-id" // replace with real link
+        whatsappLink="https://chat.whatsapp.com/G9XRHJ7UQc44d0ayqiIaPM" // replace with real link
       />
     </>
   );
