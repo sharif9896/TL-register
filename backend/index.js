@@ -5,7 +5,13 @@ import registerRoute from "./routes/register.js";
 import mongodb from "./config/mongodb.js";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://tl-register.vercel.app", // your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 mongodb();
