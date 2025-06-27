@@ -10,10 +10,9 @@ app.use(express.json());
 
 mongodb();
 
+app.use("/api/techlead", registerRoute);
 app.use("/", (req, res) => {
   res.send("Api is Running...");
 });
-app.use("/api/techlead", registerRoute);
-
 
 app.listen(5000, () => console.log("Server started on port 5000"));

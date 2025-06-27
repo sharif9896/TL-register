@@ -25,7 +25,11 @@ function RegisterForm() {
     e.preventDefault();
     settru(true);
     try {
-      await axios.post(`${BACKEND_URL}/api/techlead/register`, formData);
+      const res = await axios.post(
+        `${BACKEND_URL}/api/techlead/register`,
+        formData
+      );
+      console.log(res);
       toast.success("Registered successfully!");
       setShowPopup(true);
     } catch (err) {
@@ -148,7 +152,6 @@ function RegisterForm() {
       </form>
       <CongratsPopup
         show={showPopup}
-        number={formData.phone}
         onClose={() => setShowPopup(false)}
         whatsappLink="https://chat.whatsapp.com/G9XRHJ7UQc44d0ayqiIaPM" // replace with real link
       />
