@@ -15,6 +15,7 @@ function RegisterForm() {
   });
 
   const navigate = useNavigate();
+  const [tru, settru] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,6 +23,7 @@ function RegisterForm() {
   const [showPopup, setShowPopup] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    settru(true);
     try {
       await axios.post(`${BACKEND_URL}/api/techlead/register`, formData);
       toast.success("Registered successfully!");
@@ -141,7 +143,7 @@ function RegisterForm() {
           type="submit"
           className="w-full cursor-pointer bg-blue-600 text-white p-2"
         >
-          Register
+          {tru ? "Registering..." : "Register"}
         </button>
       </form>
       <CongratsPopup
