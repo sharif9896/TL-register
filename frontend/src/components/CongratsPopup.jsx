@@ -1,6 +1,7 @@
 // src/components/CongratsPopup.jsx
 import React from "react";
 import { CheckCircle, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CongratsPopup = ({ show, onClose, number, whatsappLink }) => {
   if (!show) return null;
@@ -22,16 +23,14 @@ const CongratsPopup = ({ show, onClose, number, whatsappLink }) => {
           joining our WhatsApp community, Just accept to recieve joining link.
         </p>
 
-        <a
-          href={`https://wa.me/${number}?text=${encodeURIComponent(
-            whatsappLink
-          )}`}
+        <Link
+          to={`/`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block cursor-pointer px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
         >
           Accept
-        </a>
+        </Link>
       </div>
     </div>
   );
