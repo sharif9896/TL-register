@@ -148,6 +148,7 @@ function RegisterForm() {
       </form>
       <CongratsPopup
         show={showPopup}
+        number={formData.phone}
         onClose={() => setShowPopup(false)}
         whatsappLink="https://chat.whatsapp.com/G9XRHJ7UQc44d0ayqiIaPM" // replace with real link
       />

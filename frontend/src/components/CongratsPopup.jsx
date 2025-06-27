@@ -2,7 +2,7 @@
 import React from "react";
 import { CheckCircle, X } from "lucide-react";
 
-const CongratsPopup = ({ show, onClose, whatsappLink }) => {
+const CongratsPopup = ({ show, onClose, number, whatsappLink }) => {
   if (!show) return null;
 
   return (
@@ -23,7 +23,9 @@ const CongratsPopup = ({ show, onClose, whatsappLink }) => {
         </p>
 
         <a
-          href={whatsappLink}
+          href={`https://wa.me/${number}?text=${encodeURIComponent(
+            whatsappLink
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block cursor-pointer px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
